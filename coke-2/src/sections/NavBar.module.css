@@ -1,0 +1,33 @@
+.nav-items a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* background animation */
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50px;
+  transition: bottom 0.4s ease;
+  z-index: -1;
+}
+
+/* hover effect */
+.nav-items a:hover::after {
+  bottom: 0;
+}
+
+/* text color change */
+.nav-items a:hover {
+  color: white;
+}
